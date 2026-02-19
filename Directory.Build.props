@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup>
+    <!--<
+      ════════════════════════════════════════════════════════
+                   Enter your SCP:SL path HERE!
+      ════════════════════════════════════════════════════════
+
+      Windows (Steam Standard):
+        C:\Program Files (x86)\Steam\steamapps\common\SCP Secret Laboratory
+
+      Linux:
+        /home/container/.config/SCP Secret Laboratory
+
+      Example Windows:
+        <SCPPath>C:\Program Files (x86)\Steam\steamapps\common\SCP Secret Laboratory</SCPPath>
+    -->
+   <SCPPath>D:\SteamLibrary\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed (Example)</SCPPath>
+  </PropertyGroup>
+</Project>
