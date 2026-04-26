@@ -1,19 +1,50 @@
-# Infinite Stamina
+# InfiniteStamina
 
-This repository contains a project designed to demonstrate stamina management in gaming.
+A [LabAPI](https://github.com/northwood-studios/LabAPI) plugin for **SCP: Secret Laboratory** that maintains a configurable stamina level for players — no more running out of breath.
 
-## Author
-Leifur
+## Features
 
-## Description
-This project aims to showcase different methodologies for stamina management during gameplay, providing an engaging player experience.
+- **Configurable stamina value** — set any level from `0.0` (empty) to `1.0` (full), e.g. `0.5` keeps players at exactly half stamina
+- **SCP toggle** — SCPs are excluded by default, can be enabled via config
+- **Exempt roles** — define a list of roles that are unaffected (Spectator, Overwatch, None by default)
+- **Enable/disable** without removing the plugin — just set `is_enabled: false`
+- **Input validation** — invalid stamina values are automatically clamped and logged on startup
 
 ## Installation
-Follow these steps to install and run the project locally:
 
-1. Clone the repository.
-2. Navigate to the project directory.
-3. Run the application using your preferred method.
+1. Download the latest `InfiniteStamina.dll` from [Releases](../../releases)
+2. Place it in your LabAPI plugins folder:
+   ```
+   %AppData%\SCP Secret Laboratory\LabAPI\plugins\
+   ```
+3. Restart your server — a `config.yml` will be generated automatically
 
-## Contributing
-Feel free to raise issues or submit pull requests for improvements.
+## Configuration
+
+Located at: `LabAPI/configs/<port>/InfiniteStamina/config.yml`
+
+```yaml
+# Enable or disable the plugin entirely.
+is_enabled: true
+
+# If true, SCPs are also affected.
+allow_scps: false
+
+# Stamina level to maintain. 1.0 = full, 0.5 = half, 0.0 = empty.
+stamina_value: 1.0
+
+# Roles that are NOT affected by this plugin.
+exempt_roles:
+  - Spectator
+  - Overwatch
+  - None
+```
+
+## Requirements
+
+- SCP: Secret Laboratory Dedicated Server
+- LabAPI (bundled with the server)
+
+## Author
+
+**Leifur**
